@@ -5,7 +5,7 @@ import zipfile
 import sys
 
 
-def extrair(path):
+def extrair(path: str):
     if not os.path.exists(path):
         print(f'Arquivo {path} não existe')
         sys.exit(-1)

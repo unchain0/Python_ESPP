@@ -27,7 +27,7 @@ def download(response, output):
         print(f'Downloading => {int(total_download)}%')
 
 
-def main(url):
+def main(url: str):
     try:
         response = request.urlopen(url)
         out_file = io.FileIO('saida.zip', mode='w')
@@ -41,6 +41,6 @@ def main(url):
 
         response.close()
         out_file.close()
-        print('\033[32mDownload completed\033[m')
+        print('\033[32mDownload completo\033[m')
     except urllib.error.URLError:
         print('\033[31mInvalid url\033[m')
